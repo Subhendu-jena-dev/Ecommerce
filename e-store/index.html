@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0%;
+        padding: 0%;
+      }
+      body {
+        height: 100vh;
+        width: 100vw;
+        background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+      }
+      nav {
+        height: 10%;
+        width: 100%;
+        /* border: 2px solid black; */
+        display: flex;
+        background: #eeaeca;
+        background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+        box-shadow: 0px 10px 10px grey;
+        border-radius: 10px;
+      }
+      nav > .leftnav {
+        height: 100%;
+        width: 30%;
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 30px;
+        color: #fa084d;
+      }
+      nav > .rightnav {
+        height: 100%;
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .navlist {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 60%;
+        list-style: none;
+      }
+      .navlist > .listitem > a {
+        color: black;
+        font-size: 25px;
+        text-decoration: none;
+      }
+      .navlist > .listitem > a:hover {
+        color: red;
+      }
+      .rightnav > button {
+        background-image: linear-gradient(to right, #77a1d3 0%, #79cbca 51%, #77a1d3 100%);
+      }
+
+      .rightnav > button {
+        margin: 10px;
+        padding: 15px 45px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        font-size: larger;
+        color: white;
+        box-shadow: 0 0 20px #eee;
+        border-radius: 10px;
+        display: block;
+      }
+      .rightnav > button:hover {
+        background-position: right center; /* change the direction of the change here */
+        color: #fff;
+        text-decoration: none;
+      }
+
+      main {
+        height: 89%;
+        width: 100vw;
+        position: relative;
+        margin-top: 5px;
+        background-image: url("/e-store/pages/shopping-carts-blue-background-with-copy-space.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+       
+      }
+      main > #loginbox {
+        height: 80%;
+        width: 50%;
+        position: absolute;
+        left: 25%;
+        right: 20%;
+        top: 5%;
+        border-radius: 20px;
+
+        background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+
+        display: none;
+      }
+
+      #loginbox > #loginform {
+        margin-top: 20px;
+        margin-bottom: 50px;
+        height: 80%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      #loginbox > #closebtn {
+        border-radius: 50%;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        border: none;
+      }
+      #loginform > input {
+        width: 50%;
+        height: 60px;
+        border-radius: 10px;
+        font-size: larger;
+        background-color: #de98e1;
+        border: none;
+      }
+      #loginform > div > button {
+        height: 50px;
+        width: 100px;
+        font-size: larger;
+        border-radius: 10px;
+        background-color: #77a1d3;
+      }
+      /* registration box */
+      main > #registrationbox {
+        height: 80%;
+        width: 50%;
+        position: absolute;
+        left: 25%;
+        right: 20%;
+        top: 5%;
+        border-radius: 20px;
+
+        background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+
+        display: none;
+      }
+      #registrationbox > #registrationform {
+        margin-top: 20px;
+        margin-bottom: 50px;
+        height: 90%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #registrationbox > #closebtn2 {
+        border-radius: 50%;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        border: none;
+      }
+      .fa-circle-xmark {
+        font-size: 45px;
+        color: rgba(244, 5, 5, 0.422);
+      }
+      .fa-circle-xmark:hover {
+        color: rgb(255, 0, 0);
+      }
+      #registrationform > input {
+        padding: 10px;
+        width: 50%;
+        height: 30px;
+        border-radius: 10px;
+        font-size: larger;
+        background-color: #de98e1;
+        border: 1px solid black;
+      }
+      #registrationform > div > button {
+        height: 50px;
+        width: 100px;
+        font-size: larger;
+        border-radius: 10px;
+        background-color: #77a1d3;
+      }
+      #registrationbutton {
+        border: 0px;
+        background-color: transparent;
+        font-size: large;
+        text-decoration: underline;
+      }
+      #loginbutton2 {
+        border: 0px;
+        background-color: transparent;
+        font-size: large;
+        text-decoration: underline;
+      }
+      .bar {
+        display: none;
+      }
+
+      @media screen and (max-width: 450px) {
+        nav > .rightnav {
+          display: none;
+        }
+        .bar {
+          display: flex;
+          align-items: center;
+          font-size: 30px;
+        }
+        nav {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+    </style>
+    <script src="/e-store/js/index.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <div class="leftnav">
+        <h1>AMA-SHOP</h1>
+      </div>
+      <div class="bar"><i class="fa-solid fa-bars"></i></div>
+      <div class="rightnav">
+        <ul class="navlist"></ul>
+        <button class="loginbutton">login</button>
+      </div>
+    </nav>
+    <main>
+      <div id="loginbox">
+        <form action="" id="loginform">
+          <h1>login</h1>
+
+          <input type="email" id="email" placeholder="  Enter your email" />
+          <input type="password" id="password" placeholder="  Enter password" />
+          <input type="number" id="otp" placeholder="  Enter the otp" />
+          <div>
+            <button type="button" id="loginotp">Get otp</button>
+            <button>Submit</button>
+            <h3>
+              Have not registered yet
+              <button type="button" id="registrationbutton">Register here</button>
+            </h3>
+          </div>
+        </form>
+
+        <button id="closebtn"><i class="fa-solid fa-circle-xmark"></i></button>
+      </div>
+      <div id="registrationbox">
+        <form action="" id="registrationform">
+          <h1>Register</h1>
+
+          <input type="text" id="name2" placeholder="  Enter your name" name="username" />
+
+          <input type="tel" id="phonenumber2" placeholder="  Enter your phone no" name="phoneno" />
+
+          <input type="email" id="email2" placeholder="  Enter your email" name="email" />
+          <input type="password" id="password2" placeholder="  Enter password" name="password" />
+          <input type="link" name="image" id="image" placeholder="Enter url of profile image" />
+          <input type="number" id="otp2" placeholder="  Enter the otp" />
+          <div>
+            <button type="button" id="registrationotp">Get otp</button>
+            <button>Submit</button>
+            <h3>
+              you have already registered
+              <button type="button" id="loginbutton2">click here to login</button>
+            </h3>
+          </div>
+        </form>
+
+        <button id="closebtn2"><i class="fa-solid fa-circle-xmark"></i></button>
+
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/e-store/css/dashbord.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script defer src="/e-store/js/dashbord.js"></script>
+  </head>
+  <body>
+    <main id="main">
+      <aside id="asidebar">
+        <h1 id="asideheading" style="text-align: center; font-size: 30px">Admin</h1>
+        <ul id="asidenavlist">
+          <li id="dashbord" class="listitem active">Dashbord</li>
+          <li id="users" class="listitem">User</li>
+          <li id="shop" class="listitem">Shop</li>
+          <li id="setting" class="listitem">Setting</li>
+          <li id="logout">Logout</li>
+        </ul>
+      </aside>
+      <section id="mainsection">
+        <div id="mainsectionbanner">
+          <h1 id="welcomenote">Welcome to dashbord</h1>
+          <div>
+            <img id="profilepicture" src="" alt="" />
+            <input type="search" id="searchbar" placeholder="  Search here  🔍" />
+          </div>
+        </div>
+        <div id="cardcontainer">
+          <!-- cardes going to created by javascript and show information fron backend -->
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
